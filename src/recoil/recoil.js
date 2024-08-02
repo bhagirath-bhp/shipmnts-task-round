@@ -20,6 +20,13 @@ export const userState = atom({
     localStorageEffect('userState')
   ]
 });
+export const currentNodeState = atom({
+  key: 'currentNodeState',
+  default: JSON.parse(localStorage.getItem('currentNodeState')) || "explorer",
+  effects: [
+    localStorageEffect('currentNodeState')
+  ]
+});
 
 export const toastState = atom({
   key: 'toastState',
